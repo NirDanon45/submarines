@@ -1,8 +1,7 @@
+import socket
+
 class Network:
     def __init__(self, game_socket):
-        self.src_port = src_ip
-        self.dst_ip = dst_ip
-        self.dst_port = dst_port
 
 
     def send_message(self, message):
@@ -10,7 +9,8 @@ class Network:
         sends the message object given to it.
         :return: the
         """
-        
+        with socket.socket() as 
+
 
     def receive_message(self):
         raise NotImplementedError

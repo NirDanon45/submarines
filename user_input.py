@@ -9,6 +9,7 @@ def get_initial_arrangement_from_user() -> board.Board:
     board.Board()
 
 
+
 def get_guess_from_user() -> list:
     """
     the function handles user input for each turn

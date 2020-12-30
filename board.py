@@ -1,5 +1,6 @@
 import exceptions
-
+NUMBER_OF_ROWS = 10
+NUMBER_OF_COLUMNS = 10
 
 class Board:
     def __init__(self, row_count, col_count, submarines=[]):
@@ -39,3 +40,26 @@ class Board:
 
         self.submarines.remove(submarine_to_sink)
         return submarine_to_sink
+
+    def get_all_ships_coords(self):
+        coords = []
+        for sub in self.submarines:
+            coords.append(sub.coords)
+        return coords
+
+    def get_ascii_art(self):
+        """"
+        returns ascii representation of the board
+        """
+        board = []
+        all_subs_coords = self.get_all_ships_coords()
+        for i in range(0, NUMBER_OF_ROWS):
+            row = []
+            for j in range(0, NUMBER_OF_COLUMNS):
+                if [i, j] in all_subs_coords:
+                    row.append("S")
+                else:
+                    row.append("~")
+            board.append(row)
+        return board
+
