@@ -1,2 +1,2 @@
 # submarines
-simple submarine peere to peer implementation
+simple submarine peer to peer implementation
