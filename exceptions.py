@@ -3,3 +3,6 @@ class OverlapingShipsExeption(Exception):
 
 class NoneExistentSubmarine(Exception):
     pass
+
+class WrongInputException(Exception):
+    pass
